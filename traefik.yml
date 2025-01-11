@@ -1,0 +1,18 @@
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+certificatesResolvers:
+  letsEncrypt:
+    acme:
+      email: faizanops@alazka.ai
+      storage: /acme.json
+      tlsChallenge: {}
+
+providers:
+  docker:
+    exposedByDefault: false
+  file:
+    filename: dynamic.yml

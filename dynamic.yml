@@ -1,0 +1,15 @@
+http:
+  routers:
+    static-site:
+      rule: "Host(`tiger.bloomi5.com`)"
+      service: static-service
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsEncrypt
+
+  services:
+    static-service:
+      loadBalancer:
+        servers:
+          - url: "https://justfordemo2.z29.web.core.windows.net"
