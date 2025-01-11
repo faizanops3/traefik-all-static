@@ -15,4 +15,4 @@ providers:
   docker:
     exposedByDefault: false
   file:
-    filename: /home/azureuser/traefik-all-static/dynamic.yml
+    filename: /dynamic.yml
