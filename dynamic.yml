@@ -1,7 +1,7 @@
 http:
   routers:
     static-site:
-      rule: "Host(`tiger.bloomi5.com`)"
+      rule: "HostRegexp(`{host:.+}`)"
       service: static-service
       entryPoints:
         - websecure
